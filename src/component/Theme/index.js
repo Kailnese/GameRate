@@ -5,7 +5,7 @@ import './index.less'
 import logo from './logo.png'
 import { withRouter } from 'react-router-dom'
 
-const { Header, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 
 class Theme extends Component {

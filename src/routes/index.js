@@ -1,7 +1,8 @@
 import {
     Dashboard,
     GameList,
-    UserInfo
+    UserInfo,
+    GameDetails
 } from '../views'
 
 export const adminRouter = [{
@@ -15,11 +16,17 @@ export const adminRouter = [{
     component: GameList,
     title: 'GameList',
     isNav: true,
-    icon: "unordered-list"
+    icon: "unordered-list",
+    exact: true
 },{
     pathname: '/admin/userinfo',
     component: UserInfo,
     title: 'User Information',
     isNav: true,
     icon: "setting"
+},{
+    pathname: '/admin/gamelist/:id',
+    component: GameDetails,
+    title: 'Game Details',
+    isNav: false
 }]
