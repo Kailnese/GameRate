@@ -1,8 +1,9 @@
 import {
     Dashboard,
     GameList,
-    UserInfo,
-    GameDetails
+    AddNewGame,
+    GameDetails,
+    SmallGame
 } from '../views'
 
 export const adminRouter = [{
@@ -19,14 +20,20 @@ export const adminRouter = [{
     icon: "unordered-list",
     exact: true
 },{
-    pathname: '/admin/userinfo',
-    component: UserInfo,
-    title: 'User Information',
+    pathname: '/admin/newgame',
+    component: AddNewGame,
+    title: 'Add New Game',
     isNav: true,
-    icon: "setting"
+    icon: "folder-add"
 },{
     pathname: '/admin/gamelist/:id',
     component: GameDetails,
     title: 'Game Details',
     isNav: false
+},{
+    pathname: '/admin/gameplay',
+    component: SmallGame,
+    title: `Game Play`,
+    isNav: true,
+    icon: `aliwangwang`
 }]

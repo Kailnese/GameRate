@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import SnakeGame from './SnakeGame'
 
-export default class UserInfo extends Component {
+export default class SmallGame extends Component {
     render() {
         return (
             <div>
-                User Information
+                <SnakeGame />
             </div>
         )
     }

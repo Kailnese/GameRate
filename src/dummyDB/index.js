@@ -1,9 +1,11 @@
-export const Games = [{
+export var Games = [{
     id: 1,
     title: "Dark souls",
     imageSrc: "dark_souls.jpg",
     like: 330,
     dislike: 15,
+    liked: false,
+    disliked: false,
     comments: [
         "Well, what do we have here? You must be a new arrival...",
         "Put PTDE back on Steam",
@@ -18,6 +20,8 @@ export const Games = [{
     imageSrc: "demon_souls.jpg",
     like: 275,
     dislike: 144,
+    liked: false,
+    disliked: false,
     comments: [
         "Hollow tree is just as bad. Finished them so spare me the git gud, ",
         "Glass cannon sorcery build + Nito = not a fun time",
@@ -32,6 +36,8 @@ export const Games = [{
     imageSrc: "bloodborne.jpg",
     like: 356,
     dislike: 477,
+    liked: false,
+    disliked: false,
     comments: [
         "Easily one of the most relaxing games on steam with a great story and beautiful atmosphere. 10/10",
         "So close to the original game that they re-introduced bugs that were fixed in the 'Prepare to die' Edition",
@@ -46,6 +52,8 @@ export const Games = [{
     imageSrc: "sekiro.jpg",
     like: 41,
     dislike: 244,
+    liked: false,
+    disliked: false,
     comments: [
         "Theres cheaters who can kill all npcs in YOUR world, whether you summon them to help you, or they invade you",
         "The only option to play online safely is to create backup of your savegame files, and do it every time you want to go online.",
@@ -60,6 +68,8 @@ export const Games = [{
     imageSrc: "hollow_knight.jpg",
     like: 311,
     dislike: 41,
+    likeClicked: false,
+    dislikeClicked: false,
     comments: [
         "And there's me thinking about getting this game again... Nop, nevermind. I remember all the reason why now.",
         "Thank you. This is reminder to not buy this game",
@@ -74,6 +84,8 @@ export const Games = [{
     imageSrc: "cuphead.jpg",
     like: 879,
     dislike: 896,
+    liked: false,
+    disliked: false,
     comments: [
         "And why do you care? Are you coolhacker?",
         "Yes, gitgud is best advice versus hackers.",
@@ -82,3 +94,4 @@ export const Games = [{
     ],
     description: "Cuphead's gameplay is centered around continual boss fights, interspersed with run-and-gun levels. All worlds but the final one include a mausoleum where the player has to parry ghosts before they touch an urn which rewards them with a Super move for completing the challenge. Each of these boss fights and run-and-gun levels is housed in one of four different worlds, with the fourth world containing the final fight against the Devil himself. Each boss fight includes a simple, normal and expert difficulty mode"
 }]
+

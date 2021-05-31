@@ -1,33 +1,38 @@
 import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
+import { Provider } from 'react-redux'
+
 import { adminRouter } from './routes'
 import {Theme} from './component'
-import { Games } from './dummyDB'
+import store from './store'
+
 
 const menus = adminRouter.filter(route => route.isNav === true)
 export default class App extends Component {
-    addComment = {}
     
     render() {
         return (
             <Theme menus={menus}>
-                <Switch>
-                    {
-                        adminRouter.map(route => {
-                            return <Route 
-                                    key={route.pathname}
-                                    path={route.pathname}
-                                    exact={route.exact}
-                                    render={(routerProps, data) => {
-                                        return <route.component {...routerProps} data={Games}/>
-                                    }}
-                                    />
-                        })
-                    }
+                <Provider store={store}>
                     
-                    <Redirect to={adminRouter[0].pathname} from="/admin" exact/>
-                    <Redirect to="/404" />
-                </Switch>
+                    <Switch>
+                        {
+                            adminRouter.map(route => {
+                                return <Route 
+                                        key={route.pathname}
+                                        path={route.pathname}
+                                        exact={route.exact}
+                                        render={(routerProps) => {
+                                            return <route.component {...routerProps}/>
+                                        }}
+                                        />
+                            })
+                        }
+                        
+                        <Redirect to={adminRouter[0].pathname} from="/admin" exact/>
+                        <Redirect to="/404" />
+                    </Switch>
+                </Provider>
             </Theme>
             
         )
